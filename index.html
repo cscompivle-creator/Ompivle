@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ompinagar CSC Vle | Premium Digital Services Tripura</title>
+    <style>
+        /* Modern CSS Variables & Reset */
+        :root {
+            --primary-color: #0f4c81; /* Professional Deep Blue */
+            --secondary-color: #25D366; /* WhatsApp Green Accent */
+            --orange-color: #f58220; /* Accent Orange */
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--orange-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange-color);
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.85), rgba(15, 76, 129, 0.95)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 650px;
+        }
+
+        .cta-btn {
+            background-color: var(--orange-color);
+            color: var(--text-light);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #e07216;
+            transform: translateY(-2px);
+        }
+
+        /* Our Services Section */
+        .services-section {
+            padding: 60px 5%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 65px;
+            height: 4px;
+            background-color: var(--orange-color);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 25px 20px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-color);
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+            color: var(--orange-color);
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            font-size: 19px;
+            color: var(--primary-color);
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-card ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .service-card ul li::before {
+            content: "•";
+            color: var(--orange-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Contact & Forms Layout */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 60px 5%;
+            gap: 40px;
+        }
+
+        .contact-info, .contact-form-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info h2, .contact-form-wrapper h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-details-list {
+            list-style: none;
+        }
+
+        .contact-details-list li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .contact-details-list strong {
+            color: var(--primary-color);
+        }
+
+        /* Input Controls */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea, select {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Custom Styling for File Upload Component */
+        .file-upload-wrapper {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .file-upload-wrapper label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+
+        .file-upload-wrapper input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px dashed var(--primary-color);
+            background-color: #f0f4f8;
+            cursor: pointer;
+        }
+
+        .upload-note {
+            font-size: 12px;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* WhatsApp Submit Button styling */
+        form button.whatsapp-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        form button.whatsapp-btn:hover {
+            background-color: #20ba5a;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                🌐 Ompinagar <span>CSC Vle</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#update-request">Apply & Update</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to Ompinagar CSC Vle</h1>
+        <p>Authorized Common Service Center delivering fast, verified, and secure G2C documentation and welfare scheme management across Gomati Tripura.</p>
+        <a href="#update-request" class="cta-btn">New Application / Update</a>
+    </section>
+
+    <section class="services-section" id="services">
+        <h2 class="section-title">Our Premium Services</h2>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Government Certificates</h3>
+                <p>Official portal application and processing for vital citizen documentation:</p>
+                <ul>
+                    <li>PRTC (Permanent Resident Certificate)</li>
+                    <li>Income Certificate</li>
+                    <li>Marriage Certificate</li>
+                    <li>Survival Certificate</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏛️</div>
+                <h3>Caste Certificates</h3>
+                <p>Authentic documentation registration for social welfare benefits alignment:</p>
+                <ul>
+                    <li>ST Certificate Application</li>
+                    <li>SC Certificate Application</li>
+                    <li>OBC Certificate Application</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🆔</div>
+                <h3>Identity Management</h3>
+                <p>Secure administrative processing, fresh issuance, and verification pathways:</p>
+                <ul>
+                    <li>PAN Card (New & Corrections)</li>
+                    <li>Aadhar Print & Verification</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌾</div>
+                <h3>Primary Sector Portals</h3>
+                <p>Comprehensive enrollment setup for regional farmers and primary producers:</p>
+                <ul>
+                    <li>PM-Kisan Scheme Management</li>
+                    <li>Fishery Registration Services</li>
+                </ul>
+            </div>
+
+            <div class="service-card" style="border-top: 4px solid var(--orange-color);">
+                <div class="service-icon">🔄</div>
+                <h3>Corrections & Data Updates</h3>
+                <p>Comprehensive service tracking and data rectifications for all profiles:</p>
+                <ul>
+                    <li>Name, DOB, & Address Modifications</li>
+                    <li>Application Track & Portal Resubmissions</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-container" id="update-request">
+        <div class="contact-info">
+            <h2>Visit Our Local Desk</h2>
+            <p style="margin-bottom: 20px;">Bring your supporting original documents to our physical desk for instant electronic scanning and submission confirmation.</p>
+            <ul class="contact-details-list">
+                <li><strong>📍 Address:</strong> Ompinagar, Amarpur, Gomati Tripura - 799101</li>
+                <li><strong>📞 Mobile:</strong> +91 84159 06227</li>
+                <li><strong>✉️ Email:</strong> csc.ompivle@gmail.com</li>
+                <li><strong>⏰ Hours:</strong> 9:00 AM - 6:00 PM (Monday - Saturday)</li>
+            </ul>
+        </div>
+
+        <div class="contact-form-wrapper">
+            <h2>Digital Inquiry & Update Desk</h2>
+            <form onsubmit="sendToWhatsApp(event)">
+                
+                <input type="text" id="citizen-name" placeholder="Citizen Full Name" required>
+                <input type="tel" id="citizen-phone" placeholder="Active Mobile Number" required>
+                
+                <select id="service-select" required>
+                    <option value="" disabled selected>Select Specific Service</option>
+                    <option value="PRTC (Resident Certificate)">PRTC (Resident Certificate)</option>
+                    <option value="Income Certificate">Income Certificate</option>
+                    <option value="PAN Card Services">PAN Card Services</option>
+                    <option value="Aadhar Print Service">Aadhar Print Service</option>
+                    <option value="ST Certificate">ST Certificate</option>
+                    <option value="SC Certificate">SC Certificate</option>
+                    <option value="OBC Certificate">OBC Certificate</option>
+                    <option value="Marriage Certificate">Marriage Certificate</option>
+                    <option value="Survival Certificate">Survival Certificate</option>
+                    <option value="PM-Kisan Scheme">PM-Kisan Scheme</option>
+                    <option value="Fishery Registration">Fishery Registration</option>
+                </select>
+
+                <select id="action-type" required>
+                    <option value="" disabled selected>Select Processing Mode</option>
+                    <option value="Fresh / New Application">Fresh / New Application Submission</option>
+                    <option value="Correction / Modification">Correction / Modification of Existing Record</option>
+                    <option value="Application Status Check">Track Application Current Status</option>
+                </select>
+
+                <div class="file-upload-wrapper">
+                    <label for="document-file">Upload Supporting Documents (আধার/প্যান/ভোটার কার্ড):</label>
+                    <input type="file" id="document-file" accept=".jpg,.jpeg,.png,.pdf">
+                </div>
+                <span class="upload-note">* ফাইলটি সিলেক্ট করার পর নিচের বাটনে ক্লিক করে চ্যাটে ফাইলটি অ্যাটাচ করে দিন।</span>
+
+                <textarea id="message-text" rows="3" placeholder="Provide extra profile context (e.g., PAN correction field details, Income update verification status)..." required></textarea>
+                
+                <button type="submit" class="whatsapp-btn">
+                     Submit via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ompinagar CSC Vle. Authorized Village Level Entrepreneur Portal | Gomati Tripura.</p>
+    </footer>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault(); // Prevents the 405 Method Not Allowed error
+
+            // Fetch form values
+            const name = document.getElementById('citizen-name').value;
+            const phone = document.getElementById('citizen-phone').value;
+            const service = document.getElementById('service-select').value;
+            const action = document.getElementById('action-type').value;
+            const docFile = document.getElementById('document-file').files[0];
+            const message = document.getElementById('message-text').value;
+
+            // Handle filename output if uploaded
+            let fileNameStr = "No document attached";
+            if(docFile) {
+                fileNameStr = docFile.name;
+            }
+
+            // Construct WhatsApp Text Payload with Clean Formatting
+            const whatsappMessage = `*--- NEW CSC SERVICE REQUEST ---*%0A%0A` +
+                                    `👤 *Citizen Name:* ${name}%0A` +
+                                    `📞 *Contact Number:* ${phone}%0A` +
+                                    `📂 *Requested Service:* ${service}%0A` +
+                                    `⚡ *Operation Mode:* ${action}%0A` +
+                                    `📄 *Selected Document:* ${fileNameStr}%0A` +
+                                    `📝 *Message / Extra Details:* ${message}%0A%0A` +
+                                    `🛑 _নোট: অনুগ্রহ করে আপনার সিলেক্ট করা ডকুমেন্ট ফাইলটি নিচের 'Attach' আইকনে ক্লিক করে এই চ্যাটে পাঠিয়ে দিন।_`;
+
+            // Redirect to target Business WhatsApp Number securely
+            const targetWhatsAppNumber = "918415906227";
+            const finalRedirectUrl = `https://wa.me/${targetWhatsAppNumber}?text=${whatsappMessage}`;
+            
+            window.open(finalRedirectUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
